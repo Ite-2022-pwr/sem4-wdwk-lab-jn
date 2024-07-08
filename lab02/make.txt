@@ -1,0 +1,6 @@
+all: lab.s
+	as -o lab.o lab.s
+	ld -o lab lab.o
+
+debug: lab.s
+	gcc -m32 -g -nostdlib -nostartfiles -o lab lab.s
